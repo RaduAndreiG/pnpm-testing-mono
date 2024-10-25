@@ -8,7 +8,9 @@
     "checks": "pnpm run -r checks",
     "startup": "./scripts/db-startup.sh && pnpm run -r dev",
     "test:backend:int": "pnpm run --filter=backend test:int",
-    "test:backend:unit": "pnpm run --filter=backend test:unit"
+    "test:backend:unit": "pnpm run --filter=backend test:unit",
+    "test:e2e": "pnpm run --filter=e2e test",
+    "test:e2e:headed": "pnpm run --filter=e2e test:headed"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +20,8 @@
     "husky": "^8.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.1",
+    "@types/node": "18.11.12",
     "prisma": "^4.11.0"
   }
 }
