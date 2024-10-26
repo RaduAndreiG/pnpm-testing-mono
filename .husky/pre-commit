@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-# pnpm --filter=backend checks
-# pnpm --filter=frontend checks
+# npm --filter=backend checks
+# npm --filter=frontend checks
