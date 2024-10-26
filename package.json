@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "./backend",
+    "./e2e",
+    "./frontend",
+    "./prisma"
+  ],
   "scripts": {
     "prepare": "husky install",
-    "checks": "pnpm run -r checks",
-    "startup": "./scripts/db-startup.sh && pnpm run -r dev",
-    "test:backend:int": "pnpm run --filter=backend test:int",
-    "test:backend:unit": "pnpm run --filter=backend test:unit"
+    "checks": "npm run -r checks",
+    "startup": "./scripts/db-startup.sh && npm run -r dev",
+    "test:backend:int": "npm run test:int -w backend",
+    "test:backend:unit": "npm run test:unit -w backend",
+    "test:e2e": "npm run test -w e2e",
+    "test:e2e:headed": "npm run test:headed -w e2e"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +26,8 @@
     "husky": "^8.0.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.48.1",
+    "@types/node": "18.11.12",
     "prisma": "^4.11.0"
   }
 }
