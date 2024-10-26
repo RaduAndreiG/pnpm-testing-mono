@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "workspaces": [
+    "./backend",
+    "./e2e",
+    "./frontend",
+    "./prisma"
+  ],
   "scripts": {
     "prepare": "husky install",
     "checks": "pnpm run -r checks",

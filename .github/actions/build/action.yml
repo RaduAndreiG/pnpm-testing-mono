@@ -3,14 +3,10 @@ description: 'Sets up the repository'
 runs:
   using: 'composite'
   steps:
-    - name: Set up pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: latest
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 20.16.0
     - name: Install dependencies
       shell: bash
-      run: pnpm install
+      run: npm install
