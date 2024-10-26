@@ -16,4 +16,4 @@ runs:
       run: pnpm install
     - name: Install local-pkg
       shell: bash
-      run: pnpm add local-pkg
+      run: pnpm add -w local-pkg
